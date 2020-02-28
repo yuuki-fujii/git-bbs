@@ -14,6 +14,11 @@ import com.example.form.ArticleForm;
 import com.example.form.CommentForm;
 import com.example.repository.ArticleRepository;
 
+/**
+ * 記事投稿をする.
+ * @author mayumiono
+ *
+ */
 @Controller
 @RequestMapping("/insert-article")
 public class InsertArticleController {
