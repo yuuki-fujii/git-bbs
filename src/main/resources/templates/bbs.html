@@ -35,7 +35,7 @@
 	</form>
 	<br>
 
-	<div th:each="comment:${article.commentList}">
+<!-- 	<div th:each="comment:${article.commentList}">
 		<div th:text="'コメントID'+${comment.id}">コメントID</div>
 		<div th:text="'コメント者名'+${comment.name}">コメント者名</div>
 		<div th:text="'コメント内容'+${comment.content}">コメント内容</div>
@@ -55,7 +55,7 @@
 		<textarea name="content" th:field="*{content}" rows="5" cols="20px"></textarea><br>
 		<input type="hidden" name="articleId" th:value="${article.id}">
 		<button>コメント投稿</button>
-	</form>
+	</form> -->
 
 </div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

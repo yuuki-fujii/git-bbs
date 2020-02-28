@@ -6,4 +6,4 @@ spring:
   password: postgres
 server:
  servlet:
-  context-path: /ex-bbs
+  context-path: 

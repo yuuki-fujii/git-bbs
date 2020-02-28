@@ -1,7 +1,5 @@
 package com.example.controller;
 
-import javax.servlet.ServletContext;
-
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -41,16 +39,16 @@ public class InsertArticleController {
 	 * @param model       リクエストスコープ
 	 * @return 初期画面へのリダイレクト（エラー時は直接、初期画面）
 	 */
-	@RequestMapping("/")
+	@RequestMapping("")
 	public String insertArticle(@Validated ArticleForm articleForm, BindingResult result, Model model) {
 		if (result.hasErrors()) {
-			return "forward:/";
+			return "forward:/bbs";
 		}
 
 		Article article = new Article();
 		BeanUtils.copyProperties(articleForm, article);
 		articleRepository.insert(article);
-		return "redirect:/to-index";
+		return "redirect:/insert-article/to-index";
 	}
 	
 	/**
@@ -61,7 +59,7 @@ public class InsertArticleController {
 	 */
 	@RequestMapping("/to-index")
 	public String redirect(Model model) {
-		return "forward:/";
+		return "forward:/bbs";
 	}
 
 }
