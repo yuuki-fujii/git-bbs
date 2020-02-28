@@ -21,7 +21,7 @@ public class ShowbbsController {
 	public String index(Model model) {
 		List <Article> articleList = articleRepository.findAll();		
 		model.addAttribute("articleList", articleList);
-		return "index";
+		return "bbs";
 	}
 	
 }
